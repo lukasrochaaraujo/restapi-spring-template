@@ -1,0 +1,3 @@
+clients:
+  speedio:
+    url: 'https://api-publica.speedio.com.br'
