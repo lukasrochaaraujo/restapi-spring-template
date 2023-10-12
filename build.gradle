@@ -27,6 +27,7 @@ dependencies {
 	implementation 'org.flywaydb:flyway-core'
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 	implementation 'io.swagger:swagger-annotations:1.6.11'
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
