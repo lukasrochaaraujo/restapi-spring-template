@@ -1,6 +1,46 @@
+# Keystore/keys generated using JDK have validity of three months.
+app:
+  security:
+    jwt:
+      keystore-location: jwt-keystore.jks
+      keystore-password: password
+      key-alias: jwt-sign-key
+      private-key-passphrase: password
+
 clients:
   speedio:
     url: 'https://api-publica.speedio.com.br'
+
+spring:
+  application:
+    name: 'TemplateApi'
+  datasource:
+    name: api
+    url: jdbc:h2:mem:api;DB_CLOSE_DELAY=-1;IGNORECASE=TRUE;DATABASE_TO_UPPER=false
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+  flyway:
+    url: jdbc:h2:mem:api
+    schemas: api
+    user: sa
+    password: ''
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: false
+  jpa:
+    properties:
+      hibernate:
+        default_schema: api
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    format-sql: true
+    generate-ddl: false
+    hibernate:
+      dl-auto: none
 
 springdoc:
   api-docs:
